@@ -11,6 +11,7 @@ typedef struct {
     int pontos_turisticos;
     float densidade_populacional; // Nova variável para a densidade
     float pib_per_capita; // Nova variável para o PIB per capita
+    float super_poder; //variavel super poder
 } CartaSuperTrunfo;
 
 int main() {
@@ -18,7 +19,7 @@ int main() {
     CartaSuperTrunfo carta1, carta2;
 
     // --- CADASTRO DA CARTA 1 ---
-    printf("--- Cadastro da Carta 1 ---\n\n");
+    printf("\n\n--- Cadastro da Carta 1 ---\n\n");
     printf("Digite o estado (A-H): ");
     scanf(" %c", &carta1.estado);
 
@@ -40,9 +41,7 @@ int main() {
     printf("\nDigite o numero de pontos turisticos: ");
     scanf("%d", &carta1.pontos_turisticos);
 
-    // --- CALCULO DOS DADOS ADICIONAIS PARA A CARTA 1 ---
     carta1.densidade_populacional = carta1.populacao / carta1.area;
-    // O PIB foi lido em bilhões, entao multiplicamos por 1.000.000.000
     carta1.pib_per_capita = (carta1.pib * 1000000000) / carta1.populacao;
 
     // --- CADASTRO DA CARTA 2 ---
@@ -68,7 +67,7 @@ int main() {
     printf("\nDigite o numero de pontos turisticos:");
     scanf("%d", &carta2.pontos_turisticos);
 
-    // --- CALCULO DOS DADOS ADICIONAIS PARA A CARTA 2 ---
+    
     carta2.densidade_populacional = carta2.populacao / carta2.area;
     carta2.pib_per_capita = (carta2.pib * 1000000000) / carta2.populacao;
 
@@ -98,6 +97,51 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km^2\n", carta2.densidade_populacional);
     printf("PIB per Capita: %.2f reais\n", carta2.pib_per_capita);
     printf("==================================\n\n");
+
+     printf("\n\n---COMPARAÇÃO DE CARTAS---\n\n");
+    //comparação população
+    if (carta1.populacao> carta1.populacao){
+        printf("população:carta 1 venceu(1)\n");
+    }else{
+        printf("população:carta 2 venceu(0)\n");
+    }
+//comparação de àrea
+if (carta1.area > carta2.area){
+    printf("Area: carta 1 venceu(1)\n");
+}else{
+    printf("Area: carta 2 venceu(0)\n");
+}
+
+//comparação PIB
+   if (carta1.pib > carta2.pib){
+     printf("pib: carta 1 venceu(1)\n");
+     }else{
+    printf("pib: carta 2 vnceu(0)\n");
+   }
+//comparação de pontos turisticos
+if(carta1.pontos_turisticos > carta2.pontos_turisticos){
+    printf("pontos turisticos:carta 1 venceu (1)\n");
+}else{
+    printf("pontos turisticos: carta 2 venceu (0)\n");
+}
+//comparação de Densidade Populacional(a menor vence)
+if(carta1.densidade_populacional < carta2.densidade_populacional){
+   printf("densidae poulacional:carta 1 venceu (1)\n");
+}else{
+    printf("densidade populacional: carta 2 venceu(0)\n");
+}
+//comparação de PIB per capita
+if(carta1.pib_per_capita > carta2.pib_per_capita){
+    printf("PIB per capita: carta 1 venceu (1)\n");
+}else{
+    printf("PIB per capita: carta 2 venceu (0)\n");
+}
+//comparção de Super Poder
+if(carta1.super_poder > carta2.super_poder){
+    printf("Super Poder: carta 1 venceu (1)\n");
+}else{
+    printf("super poder: carta 2 venceu (0)\n");
+}
 
     return 0;
 }
