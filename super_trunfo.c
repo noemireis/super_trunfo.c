@@ -101,46 +101,46 @@ int main() {
      printf("\n\n---COMPARAÇÃO DE CARTAS---\n\n");
     //comparação população
     if (carta1.populacao> carta1.populacao){
-        printf("população:carta 1 venceu(1)\n");
+        printf("população:carta 1 venceu\n");
     }else{
-        printf("população:carta 2 venceu(0)\n");
+        printf("população:carta 2 venceu\n");
     }
 //comparação de àrea
 if (carta1.area > carta2.area){
-    printf("Area: carta 1 venceu(1)\n");
+    printf("Area: carta 1 venceu\n");
 }else{
-    printf("Area: carta 2 venceu(0)\n");
+    printf("Area: carta 2 venceu\n");
 }
 
 //comparação PIB
    if (carta1.pib > carta2.pib){
-     printf("pib: carta 1 venceu(1)\n");
+     printf("pib: carta 1 venceu\n");
      }else{
-    printf("pib: carta 2 vnceu(0)\n");
+    printf("pib: carta 2 vnceu\n");
    }
 //comparação de pontos turisticos
 if(carta1.pontos_turisticos > carta2.pontos_turisticos){
-    printf("pontos turisticos:carta 1 venceu (1)\n");
+    printf("pontos turisticos:carta 1 venceu \n");
 }else{
-    printf("pontos turisticos: carta 2 venceu (0)\n");
+    printf("pontos turisticos: carta 2 venceu \n");
 }
 //comparação de Densidade Populacional(a menor vence)
 if(carta1.densidade_populacional < carta2.densidade_populacional){
-   printf("densidae poulacional:carta 1 venceu (1)\n");
+   printf("densidae poulacional:carta 1 venceu\n");
 }else{
-    printf("densidade populacional: carta 2 venceu(0)\n");
+    printf("densidade populacional: carta 2 venceu\n");
 }
 //comparação de PIB per capita
 if(carta1.pib_per_capita > carta2.pib_per_capita){
-    printf("PIB per capita: carta 1 venceu (1)\n");
+    printf("PIB per capita: carta 1 venceu\n");
 }else{
-    printf("PIB per capita: carta 2 venceu (0)\n");
+    printf("PIB per capita: carta 2 venceu\n");
 }
 //comparção de Super Poder
 if(carta1.super_poder > carta2.super_poder){
-    printf("Super Poder: carta 1 venceu (1)\n");
+    printf("Super Poder: carta 1 venceu\n");
 }else{
-    printf("super poder: carta 2 venceu (0)\n");
+    printf("super poder: carta 2 venceu\n");
 }
 
     return 0;
